@@ -12,15 +12,20 @@
     "typecheck": "tsc -b",
     "test": "vitest run",
     "test:engine": "vitest run tests/engine",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "android:sync": "npm run build && npx cap sync android",
+    "android:apk": "npm run android:sync && cd android && ./gradlew assembleDebug"
   },
   "dependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/core": "^6.2.0",
     "chess.js": "^1.4.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "stockfish": "^19.0.1"
   },
   "devDependencies": {
+    "@capacitor/cli": "^6.2.0",
     "@playwright/test": "^1.48.2",
     "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",

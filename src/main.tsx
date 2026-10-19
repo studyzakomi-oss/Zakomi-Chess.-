@@ -5,7 +5,9 @@ import { App } from './ui/App';
 import { StoreProvider } from './ui/store';
 import './ui/styles.css';
 
-registerSW({ immediate: true });
+// Inside the Android app (Capacitor) the files are already local, so the web service worker is skipped.
+const isNative = !!(window as unknown as { Capacitor?: { isNativePlatform?: () => boolean } }).Capacitor?.isNativePlatform?.();
+if (!isNative) registerSW({ immediate: true });
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

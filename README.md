@@ -35,6 +35,19 @@ npm run preview      # serve dist/ on http://localhost:4173
 
 Install on Android: open the deployed site in Chrome → menu → *Install app / Add to Home screen*. Any static HTTPS host works (no special headers are needed for the single-threaded engine).
 
+## Android APK
+
+A ready-to-install debug APK is in [`releases/`](releases/) (`zakomi-chess-dimensions-0.1.0-debug.apk`, Android 5.1+).
+On the phone: open the file → allow *Install unknown apps* for your browser/file manager → Install.
+
+Rebuild it yourself (needs JDK 17+ and the Android SDK, `ANDROID_HOME` set):
+
+```bash
+npm run android:apk      # → android/app/build/outputs/apk/debug/app-debug.apk
+```
+
+The APK is a Capacitor wrapper around the same web app; Stockfish runs inside it offline. It is a **debug** build (signed with the debug key), fine for personal installs; a Play Store release needs a release keystore (`./gradlew assembleRelease` + signing config).
+
 ## Tests
 
 ```bash

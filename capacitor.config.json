@@ -1,0 +1,6 @@
+{
+  "appId": "tech.zakomi.chessdimensions",
+  "appName": "Zakomi Chess",
+  "webDir": "dist",
+  "android": { "backgroundColor": "#050a1c" }
+}
