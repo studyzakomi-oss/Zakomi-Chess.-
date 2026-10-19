@@ -156,7 +156,7 @@ export const WORLD1_PUZZLES: Puzzle[] = [
   // Level 4 — protecting pieces
   {
     id: 'w1-attacked', kind: 'squares', skills: ['safety.threats'], rating: 450,
-    fen: '4k3/8/8/1b6/8/8/4R3/3NK3 w - - 0 1', query: { type: 'attacked', color: 'w' },
+    fen: '7k/8/8/1b6/8/8/4R3/3NK3 w - - 0 1', query: { type: 'attacked', color: 'w' },
     prompt: l('أي قطعة بيضاء مهددة؟', 'Which white piece is under attack?', 'Quelle pièce blanche est attaquée ?'),
     hints: [l('تتبّع أقطار الفيل b5.', 'Follow the b5 bishop’s diagonals.', 'Suis les diagonales du fou b5.'), l('القطر b5-e2 مفتوح.', 'The b5–e2 diagonal is open.', 'La diagonale b5–e2 est ouverte.')],
     explanation: l('القلعة e2 مهددة من الفيل b5.', 'The e2 rook is attacked by the b5 bishop.', 'La tour e2 est attaquée par le fou b5.'),
@@ -170,7 +170,7 @@ export const WORLD1_PUZZLES: Puzzle[] = [
   },
   {
     id: 'w1-undefended', kind: 'squares', skills: ['safety.threats', 'safety.protect'], rating: 600,
-    fen: '4k3/8/8/3n4/8/2B1Q3/8/4K3 w - - 0 1', query: { type: 'undefended', color: 'w' },
+    fen: 'k7/8/8/3n4/8/2B1Q3/8/4K3 w - - 0 1', query: { type: 'undefended', color: 'w' },
     prompt: l('أي قطعة بيضاء مهددة وغير محمية؟', 'Which white piece is attacked and unprotected?', 'Quelle pièce blanche est attaquée et non protégée ?'),
     hints: [l('الحصان d5 يهاجم قطعتين. أيهما محمية؟', 'The d5 knight attacks two pieces. Which one is protected?', 'Le cavalier d5 attaque deux pièces. Laquelle est protégée ?'), l('الوزير يحمي الفيل، لكن من يحمي الوزير؟', 'The queen guards the bishop, but who guards the queen?', 'La dame protège le fou, mais qui protège la dame ?')],
     explanation: l('الوزير e3 مهدد ولا يحميه شيء — يجب إنقاذه فورًا.', 'The e3 queen is attacked and unprotected — save it now.', 'La dame e3 est attaquée et non protégée — sauve-la.'),
@@ -181,13 +181,6 @@ export const WORLD1_PUZZLES: Puzzle[] = [
     prompt: l('الحصان الأسود يهاجم وزيرك. ما أفضل رد؟', 'The black knight attacks your queen. What is the best reply?', 'Le cavalier noir attaque ta dame. Quelle est la meilleure réponse ?'),
     hints: [l('هل المهاجم نفسه محمي؟', 'Is the attacker itself protected?', 'L’attaquant est-il protégé ?'), l('بيدقك يستطيع أخذه.', 'Your pawn can take it.', 'Ton pion peut le prendre.')],
     explanation: l('bxc3: أفضل دفاع أحيانًا هو أخذ المهاجم إذا كان غير محمي.', 'bxc3: sometimes the best defence is to capture an unprotected attacker.', 'bxc3 : parfois la meilleure défense est de prendre l’attaquant non protégé.'),
-  },
-  {
-    id: 'w1-take-attacker2', kind: 'move', skills: ['safety.protect'], rating: 600, goal: 'best',
-    fen: '4k3/8/8/8/8/1p6/2B5/4K3 w - - 0 1', line: ['c2b3'],
-    prompt: l('البيدق الأسود يهاجم فيلك. ماذا تفعل؟', 'The black pawn attacks your bishop. What do you do?', 'Le pion noir attaque ton fou. Que fais-tu ?'),
-    hints: [l('هل يجب أن تهرب، أم يمكنك الأخذ؟', 'Must you run away, or can you capture?', 'Dois-tu fuir ou peux-tu prendre ?'), l('البيدق b3 غير محمي.', 'The b3 pawn is unprotected.', 'Le pion b3 n’est pas protégé.')],
-    explanation: l('Bxb3 ينقذ الفيل ويكسب بيدقًا.', 'Bxb3 saves the bishop and wins a pawn.', 'Fxb3 sauve le fou et gagne un pion.'),
   },
 
   // Level 5 — basic mates

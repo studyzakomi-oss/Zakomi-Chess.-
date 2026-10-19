@@ -582,16 +582,16 @@ export const DIAGNOSTIC_PUZZLES: Puzzle[] = [
     skills: ['strategy.opening'],
     rating: 1250,
     fen: 'r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4',
-    query: { type: 'moves', options: ['c2c3', 'b1a3', 'h2h4'], correct: 'c2c3', mode: 'best' },
+    query: { type: 'moves', options: ['c2c3', 'h2h4', 'f3g1'], correct: 'c2c3', mode: 'best' },
     prompt: l('أي خطة هي الأفضل في هذا الافتتاح الإيطالي؟', 'Which plan is best in this Italian Game?', 'Quel plan est le meilleur dans cette partie italienne ?'),
     hints: [
       l('أي بيدق يساعدك على بناء مركز قوي بـ d4؟', 'Which pawn move helps you build a strong centre with d4?', 'Quel pion t’aide à bâtir un centre fort avec d4 ?'),
-      l('Na3 يضع الحصان على الحافة، وh4 لا يساعد المركز.', 'Na3 puts the knight on the rim; h4 does nothing for the centre.', 'Ca3 place le cavalier au bord ; h4 n’aide pas le centre.'),
+      l('h4 لا يساعد المركز، وNg1 يتراجع ويضيع الوقت.', 'h4 does nothing for the centre; Ng1 retreats and loses time.', 'h4 n’aide pas le centre ; Cg1 recule et perd du temps.'),
     ],
     explanation: l(
-      'c3 يجهّز d4 للسيطرة على المركز. «الحصان على الحافة ضعيف»، وتحريك بيادق الجناح مبكرًا يضيع الوقت.',
-      'c3 prepares d4 to take the centre. "A knight on the rim is dim", and early flank pawn moves waste time.',
-      'c3 prépare d4 pour prendre le centre. « Cavalier au bord, cavalier mort », et les poussées d’aile précoces font perdre du temps.',
+      'c3 يجهّز d4 للسيطرة على المركز. تحريك بيادق الجناح مبكرًا أو التراجع بالقطع يضيع الوقت.',
+      'c3 prepares d4 to take the centre. Early flank pawn moves and retreats waste time.',
+      'c3 prépare d4 pour prendre le centre. Les poussées d’aile précoces et les retraites font perdre du temps.',
     ),
   },
 
